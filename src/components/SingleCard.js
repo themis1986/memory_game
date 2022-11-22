@@ -2,9 +2,9 @@ import React from "react";
 
 import "./SingleCard.css";
 
-const SingleCard = ({ card, flipped, onHandleChoice }) => {
+const SingleCard = ({ card, flipped, disabled, onHandleChoice }) => {
   const handleClick = () => {
-    onHandleChoice(card);
+    !disabled && onHandleChoice(card);
   };
 
   return (
